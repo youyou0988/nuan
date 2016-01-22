@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML>
+<HEAD>
+    <TITLE>Front Page</TITLE>
+    <META http-equiv=Content-Type content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/plugins/pure-min.css">
+    <link rel="stylesheet" href="/static/index.css">
+    <script src="https://code.jquery.com/jquery-1.12.0.js"></script>
+    <link rel="stylesheet" href="/static/bxslider/jquery.bxslider.css">
+    <script src="/static/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.css">
+
+</HEAD>
+<BODY>
+<div class="dashboard">
+    <div class="up">
+        <img src="/static/icon/up.png" style="height:30px">
+    </div>
+	<div class="pure-g logo-part">
+		<div class="pure-u-1-5">
+
+	    </div>
+	    <div class="pure-u-1-5">
+	    	<img src="/static/icon/logo.png" class="logo-img"></img>
+	    </div>
+	    <div class="pure-u-1-6">
+
+	    </div>
+	    <div class="pure-u-1-5 fronter">
+            <div class="fronter-div1"><span>English</span></div>
+	    	<div style="text-align:right"><input type="search" class="search-input"></input>
+	    	<img src="/static/icon/search.png" style="vertical-align:middle;height:20px"></div>
+            <div style="text-align:right;margin-top:33px;"><span>Solutions for High Performance<br>
+            成就卓越性能</span></div>
+
+	    </div>
+	</div>
+
+
+
+    {% block content %}{% endblock %}
+
+
+    <div class="contact blockdiv">
+			<div class="pure-u-1-2">
+				<h2>联系方式</h2>
+				<span>暖框科技（北京）有限公司<br>
+
+
+北京（总部）
+北京市朝阳区建国门外大街甲24号     东海中心 1008B<br>
+电话：(86 10) 6515 9878
+传真：(86 10) 6515 9901
+<br>
+上海
+上海市静安区南京西路1266号
+恒隆广场2期15楼<br>
+电话：(86 21) 6039 8528
+传真：(86 21) 6039 8388</span>
+				<div class="email">
+					<img src="/static/icon/mail.png" style="height:11px">mkt@warmframe.com
+					<!-- <span>mkt@warmframe.com</span> -->
+				</div>
+			</div>
+			<div class="pure-u-1-3">
+
+				<div id="allmap"></div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<p>©2015 暖框科技版权所有。暖框和Warmframe是暖框科技的注册商标.
+		使用本网站表示你已理解我们的<a style="text-decoration:underline;color:#cccccc" href="/privacy/">隐私声明</a>，
+            并同意我们提出的<a style="text-decoration:underline;color:#cccccc" href="/condition/">使用条件</a>。</p>
+		</div>
+
+		<!-- </ul> -->
+	</div><!-- #footer -->
+
+
+
+</BODY>
+<!-- <script src="./plugins/insteadOfIframe.js"></script> -->
+ <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=3INlFTW6g0RoQGXUBokMA8Rc"></script>
+<script type="text/javascript">
+// $(document).ready(function(){
+  // $('.bxslider').bxSlider({
+  	 //   mode: 'fade',
+	   // captions: true,
+	   // pagerCustom: '#bx-pager',
+	   // slideWidth: 800
+  // });
+  // 百度地图API功能
+	var map = new BMap.Map("allmap");    // 创建Map实例
+	map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
+	map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+	map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+	// map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+// });
+$(document).ready(function(){
+    $(".pure-img-pic").hover(function() {
+        $('.selected').removeClass('selected');
+        $(this).addClass('selected');
+    }, function(){
+        $(this).removeClass('selected');
+    });
+    $('.up').click(function(){
+        $('body, html').animate({
+         scrollTop: 0
+        }, 1000);
+    })
+    $('.jump_to_form').click(function(){
+        window.open("/register/")
+    });
+
+});
+
+
+</script>
