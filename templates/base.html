@@ -28,9 +28,10 @@
 
 	    </div>
 	    <div class="pure-u-1-5 fronter">
-            <div class="fronter-div1"><span>English</span></div>
-	    	<div style="text-align:right"><input type="search" class="search-input"></input>
-	    	<img src="/static/icon/search.png" style="vertical-align:middle;height:20px"></div>
+            <div class="fronter-div1">{% if lan_type == 'en' %}<a style="color:white" href="/index?lag=ch">中文</a>
+                {% else %}<a style="color:white" href="/index?lag=en">English</a>{% endif %}</div>
+	    	<div style="text-align:right"><input type="search" class="search-input" style="width:160px"></input>
+	    	<img src="/static/icon/search.png" style="vertical-align:middle;height:20px;margin-top:19px"></div>
             <div style="text-align:right;margin-top:33px;"><span>Solutions for High Performance<br>
             成就卓越性能</span></div>
 
@@ -44,8 +45,19 @@
 
     <div class="contact blockdiv">
 			<div class="pure-u-1-2">
-				<h2>联系方式</h2>
-				<span>暖框科技（北京）有限公司<br>
+				<h2>{% if lan_type == 'en' %}Contacts{% else %}联系方式{% endif %}</h2>
+				<span>{% if lan_type == 'en' %}Beijing (Headquarter)
+East Ocean Centre, 10F, Room 1008B
+No. 24A JianGuoMenWai Avenue, Beijing<br>
+Tel：(86 10) 6515 9878
+Fax：(86 10) 6515 9901
+<br>
+Shanghai
+Plaza 66, 15F, Tower 2<br>
+No. 1266 West Nanjing Road, Shanghai
+Tel：(86 21) 6039 8528
+Fax：(86 21) 6039 8388
+{% else %}暖框科技（北京）有限公司<br>
 
 
 北京（总部）
@@ -57,7 +69,7 @@
 上海市静安区南京西路1266号
 恒隆广场2期15楼<br>
 电话：(86 21) 6039 8528
-传真：(86 21) 6039 8388</span>
+传真：(86 21) 6039 8388{% endif %}</span>
 				<div class="email">
 					<img src="/static/icon/mail.png" style="height:11px">mkt@warmframe.com
 					<!-- <span>mkt@warmframe.com</span> -->
@@ -72,9 +84,11 @@
 	</div>
 
 	<div class="footer">
-		<p>©2015 暖框科技版权所有。暖框和Warmframe是暖框科技的注册商标.
+		<p>{% if lan_type == 'en' %}©2015 Warmframe Technology All Rights Reserved。暖框 and Warmframe are the trademarks of Warmframe Technology.
+Using this website means you understand our <a style="text-decoration:underline;color:#cccccc" href="/privacy/">Privacy Statement<a/> and agree to our <a style="text-decoration:underline;color:#cccccc" href="/condition/">Terms & Conditions</a>.
+{% else %}©2015 暖框科技版权所有。暖框和Warmframe是暖框科技的注册商标.
 		使用本网站表示你已理解我们的<a style="text-decoration:underline;color:#cccccc" href="/privacy/">隐私声明</a>，
-            并同意我们提出的<a style="text-decoration:underline;color:#cccccc" href="/condition/">使用条件</a>。</p>
+            并同意我们提出的<a style="text-decoration:underline;color:#cccccc" href="/condition/">使用条件</a>。{% endif %}</p>
 		</div>
 
 		<!-- </ul> -->

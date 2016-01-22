@@ -8,6 +8,10 @@ from django.core.mail import send_mail
 
 
 def index(req):
+    if req.REQUEST.get('lag', None) and req.REQUEST['lag'] == 'en':
+        lan_type = 'en'
+    else:
+        lan_type = 'ch'
     return render(req, 'front.html', locals())
 
 
