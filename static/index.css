@@ -69,7 +69,7 @@ text-decoration: blink;
 	text-align: center;
 }
 .picture img{
-	width: 130px;
+	width: 11%;
 	height: 80px;
 	display: inline;
 }
@@ -221,4 +221,8 @@ margin-top: 15px;}
 
 select, textarea, input[type="text"]{
     height:25px;
+}
+
+.jump_to_form{
+    cursor:pointer;
 }
