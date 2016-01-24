@@ -3,33 +3,34 @@
 	<div class="pure-menu pure-menu-horizontal">
 	    <ul class="pure-menu-list top-part">
 	    	<li class="pure-menu-item pure-menu-selected"><a class="pure-menu-link" 
-	        	target="index.html">{% if lan_type == 'en' %}FrontPage{% else %}首页{% endif %}</a></li>
+	        	target="index.html" href="#pictureId">{% if lan_type == 'en' %}FrontPage{% else %}首页{% endif %}</a></li>
 	        <li class="pure-menu-item"><a class="pure-menu-link" 
-	        	target="tech.html">{% if lan_type == 'en' %}Warmframe{% else %}暖框技术{% endif %}</a></li>
+	        	target="tech.html" href="#techId">{% if lan_type == 'en' %}Warmframe{% else %}暖框技术{% endif %}</a></li>
 	        <li class="pure-menu-item"><a class="pure-menu-link"
-	        	target="product_detail.html">{% if lan_type == 'en' %}Products{% else %}产品介绍{% endif %}</a></li>
+	        	target="product_detail.html" href="#detailId">{% if lan_type == 'en' %}Products{% else %}产品介绍{% endif %}</a></li>
 	        <li class="pure-menu-item"><a class="pure-menu-link"
-	        	target="solution.html">{% if lan_type == 'en' %}Solutions{% else %}解决方案{% endif %}</a></li>
+	        	target="solution.html" href="#solutionId">{% if lan_type == 'en' %}Solutions{% else %}解决方案{% endif %}</a></li>
 	        <li class="pure-menu-item"><a class="pure-menu-link"
-	        	target="examples.html">{% if lan_type == 'en' %}Selected Projects{% else %}精选案例{% endif %}</a></li>
+	        	target="examples.html" href="#examplesId">{% if lan_type == 'en' %}Selected Projects{% else %}精选案例{% endif %}</a></li>
 	        <li class="pure-menu-item"><a class="pure-menu-link"
-	        	target="aboutus.html">{% if lan_type == 'en' %}About Us{% else %}关于我们{% endif %}</a></li>
+	        	target="aboutus.html" href="#aboutusId">{% if lan_type == 'en' %}About Us{% else %}关于我们{% endif %}</a></li>
 	        <li class="pure-menu-item"><a class="pure-menu-link"
-	        	target="contact.html">{% if lan_type == 'en' %}Contacts{% else %}联系方式{% endif %}</a></li>
+	        	target="contact.html" href="#contactId">{% if lan_type == 'en' %}Contacts{% else %}联系方式{% endif %}</a></li>
 	    </ul>
 	</div>
 	<div id="main" class="main">
-		<div class="picture blockdiv">
+		<div class="picture blockdiv" style="padding-left:0px" id="pictureId">
+			<input type="image" src="/static/images/f.png" class="fake_picture" style="width: 0px;">
 			<img src="/static/images/a.png" class="pure-img-pic selected" align="center"/>
 			<img src="/static/images/b.png" class="pure-img-pic" align="center"/>
 			<img src="/static/images/c.png" class="pure-img-pic" align="center"/>
 			<img src="/static/images/d.png" class="pure-img-pic" align="center"/>
 			<img src="/static/images/e.png" class="pure-img-pic" align="center"/>
 			<img src="/static/images/f.png" class="pure-img-pic" align="center"/>
-			<input type="image" src="/static/images/f.png" class="fake_picture">
+			
 		</div>
 
-		<div class="tech blockdiv">
+		<div class="tech blockdiv" id="techId">
 			<h2 style="color:#094387;">{% if lan_type == 'en' %}Warmframe{% else %}暖框技术{% endif %}</h2>
 			<p>{% if lan_type == 'en' %}Warmframe is a brand new word to the Curtain Wall Industry. Generally speaking, Warmframe is a novel and high performance thermal break technology for building envelopes. </br></br>
 Since the thermal conductivities of the metal frames of facades are usually quite high, for example, the thermal conductivity of aluminum alloy is 160.00 W/(m∙K), thermal break materials with much lower thermal conductivities are usually placed in between the metal frames to provide better thermal performance. The traditional thermal breaks include: polyamide (nylon), polyurethane (PU), EPDM and etc. The thermal conductivities of these materials are about 0.25 W/(m∙K), which is much lower than the metals. However, the thermal conductivity of the High Performance Thermal Break Blanket is typically no larger than 0.019 W/(m∙K), which is less than one tenth of the traditional materials.  In another words, the efficiency of the thermal loss thru the High Performance Thermal Break Blanket is more than 10 times better.</br></br>
@@ -40,7 +41,7 @@ Warmframe technology is to mechanically fix the High Performance Thermal Break B
 			{% endif %}</p>
   
 		</div>
-		<div class="detail blockdiv">
+		<div class="detail blockdiv" id="detailId">
 			<div class="pure-u-1-5">
 				<h2 style="color:#094387;">{% if lan_type == 'en' %}Products{% else %}产品介绍{% endif %}</h2>
 			</div>
@@ -50,8 +51,8 @@ Warmframe technology is to mechanically fix the High Performance Thermal Break B
 
 				   
 			</div>
-			<div class="pure-u-2-5" style="margin-left:55px">
-				<h3 style="margin-top:0px;color:#094387;">{% if lan_type == 'en' %}WarmFrame®1000 High Performance Thermal Break Blanket
+			<div class="pure-u-2-5" style="margin-left:67px">
+				<h3 style="margin-top:0px;color:#094387;">{% if lan_type == 'en' %}Warmframe®1000 High Performance Thermal Break Blanket
 {% else %}WarmFrame®1000系列高性能幕墙隔热毯{% endif %}</h3>
 				<table class="pure-table pure-table-striped">
 		            <thead class="bluehead">
@@ -93,11 +94,11 @@ Warmframe technology is to mechanically fix the High Performance Thermal Break B
                 </div>
 			</div>
 		</div>
-		<div class="solution blockdiv">
+		<div class="solution blockdiv" id="solutionId">
 			<div class="pure-u-1-6">
 				<h2>{% if lan_type == 'en' %}Solutions{% else %}解决方案{% endif %}</h2>
 			</div>
-			<div class="pure-u-4-5">
+			<div class="pure-u-4-5" style="margin-top:14px">
 				<span>{% if lan_type == 'en' %}To assure the highest quality and performance of facades, Warmframe Technology offers the full scope professional services in each stages of the projects for our customers. The typical scope of services include:
 {% else %}为保证项目质量和性能的最高品质，Warmframe 暖框科技为幕墙工程的设计和施工人员提供从设计、测试、工艺到施工的全过程技术支持，典型的服务内容如下表所示：{% endif %}</span>
 			</div>
@@ -155,22 +156,22 @@ Warmframe technology is to mechanically fix the High Performance Thermal Break B
     				</tbody>
 			</table>
 		</div>
-		<div class="selecteddiv blockdiv">
+		<div class="selecteddiv blockdiv" id="examplesId">
 			<div class="pure-u-1-3">
 				<h2>{% if lan_type == 'en' %}Selected Projects
 {% else %}精选案例{% endif %}</h2>
 			</div>
 			<div class="pure-u-1-2">
 				<span style="margin-top:26px;display:inline-block">{% if lan_type == 'en' %}Under construction…
-{% else %}网站建设中。。。{% endif %}</span>
+{% else %}网站建设中...{% endif %}</span>
 			</div>
 		</div>
-		<div class="aboutus blockdiv">
+		<div class="aboutus blockdiv" id="aboutusId">
 			<!-- <div class="pure-u-1-5">
 				<h2>关于我们</h2>
 			</div> -->
 			<div class="pure-u-3-3">
-				<h2 style="margin-right:10px;display:inline;color:#094387;">{% if lan_type == 'en' %}About Us
+				<h2 style="margin-right:8%;display:inline;color:#094387;">{% if lan_type == 'en' %}About Us
 {% else %}关于我们{% endif %}</h2>
 				<img src="/static/images/a.png" title="Funky roots" class="aboutus-img" align="center"/>
 				<img src="/static/images/b.png" title="The long and winding road" class="aboutus-img" align="center"/>
