@@ -32,8 +32,8 @@
                 {% else %}<a style="color:white" href="/index?lag=en">English</a>{% endif %}</div>
 	    	<div style="text-align:right"><input type="search" class="search-input" style="width:160px"></input>
 	    	<img src="/static/icon/search.png" style="vertical-align:middle;height:20px;margin-top:19px"></div>
-            <div style="text-align:right;margin-top:33px;"><span>Solutions for High Performance<br>
-            成就卓越性能</span></div>
+            <div style="text-align:right;margin-top:20px;"><span>{% if lan_type == 'en' %}Solutions for High Performance<br>{% else %}
+            成就卓越性能<br>{% endif %}</span></div>
 
 	    </div>
 	</div>
@@ -43,7 +43,7 @@
     {% block content %}{% endblock %}
 
 
-    <div class="contact blockdiv">
+    <div class="contact blockdiv" id="contactId">
 			<div class="pure-u-1-2">
 				<h2>{% if lan_type == 'en' %}Contacts{% else %}联系方式{% endif %}</h2>
 				<span>{% if lan_type == 'en' %}Beijing (Headquarter)
@@ -51,7 +51,7 @@ East Ocean Centre, 10F, Room 1008B
 No. 24A JianGuoMenWai Avenue, Beijing<br>
 Tel：(86 10) 6515 9878
 Fax：(86 10) 6515 9901
-<br>
+<br><br>
 Shanghai
 Plaza 66, 15F, Tower 2<br>
 No. 1266 West Nanjing Road, Shanghai
@@ -60,12 +60,12 @@ Fax：(86 21) 6039 8388
 {% else %}暖框科技（北京）有限公司<br>
 
 
-北京（总部）
+北京（总部）:
 北京市朝阳区建国门外大街甲24号     东海中心 1008B<br>
 电话：(86 10) 6515 9878
 传真：(86 10) 6515 9901
-<br>
-上海
+<br><br>
+上海:
 上海市静安区南京西路1266号
 恒隆广场2期15楼<br>
 电话：(86 21) 6039 8528
@@ -85,10 +85,10 @@ Fax：(86 21) 6039 8388
 
 	<div class="footer">
 		<p>{% if lan_type == 'en' %}©2015 Warmframe Technology All Rights Reserved。暖框 and Warmframe are the trademarks of Warmframe Technology.
-Using this website means you understand our <a style="text-decoration:underline;color:#cccccc" href="/privacy/">Privacy Statement<a/> and agree to our <a style="text-decoration:underline;color:#cccccc" href="/condition/">Terms & Conditions</a>.
+Using this website means you understand our <a style="text-decoration:underline;color:#cccccc" href="/privacy/">Privacy Statement<a/> and agree to our <a style="text-decoration:underline;color:#cccccc" href="/nuan/condition/">Terms & Conditions</a>.
 {% else %}©2015 暖框科技版权所有。暖框和Warmframe是暖框科技的注册商标.
-		使用本网站表示你已理解我们的<a style="text-decoration:underline;color:#cccccc" href="/privacy/">隐私声明</a>，
-            并同意我们提出的<a style="text-decoration:underline;color:#cccccc" href="/condition/">使用条件</a>。{% endif %}</p>
+		使用本网站表示你已理解我们的<a style="text-decoration:underline;color:#cccccc" href="/nuan/privacy/">隐私声明</a>，
+            并同意我们提出的<a style="text-decoration:underline;color:#cccccc" href="/nuan/condition/">使用条件</a>。{% endif %}</p>
 		</div>
 
 		<!-- </ul> -->
@@ -112,7 +112,7 @@ Using this website means you understand our <a style="text-decoration:underline;
 	map.centerAndZoom(new BMap.Point(116.445554,39.91276), 15);  // 初始化地图,设置中心点坐标和地图级别
 	map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
 	map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
-	// map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+	map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
 // });
 $(document).ready(function(){
     $(".pure-img-pic").hover(function() {
