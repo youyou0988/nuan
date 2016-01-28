@@ -24,33 +24,37 @@
             <label class="title">性别</label>
             <div class="column column2">
                 <label>
-                    <input type="radio" name="radio" value="男" /><span>男</span></label>
+                    <input type="radio" name="radio" value="男" required="required"/><span>男</span></label>
             </div><span class="clearfix"></span>
             <div class="column column2">
                 <label>
-                    <input type="radio" name="radio" value="女" /><span>女</span></label>
+                    <input type="radio" name="radio" value="女" required="required"/><span>女</span></label>
             </div><span class="clearfix"></span>
         </div>
         <div class="element-name">
-            <label class="title">姓名</label><span class="nameFirst"><input  type="text" size="8" name="name[first]" /><label class="subtitle">姓</label></span><span class="nameLast"><input  type="text" size="14" name="name[last]" /><label class="subtitle">名</label></span></div>
+            <label class="title">姓名</label>
+            <span class="nameFirst">
+                <input  type="text" size="8" name="name[first]" required="required"/>
+                <label class="subtitle">姓</label></span><span class="nameLast">
+            <input  type="text" size="14" name="name[last]" required="required"/><label class="subtitle">名</label></span></div>
         
         <div class="element-input">
             <label class="title">公司</label>
-            <input class="large" type="text" name="input" />
+            <input class="large" type="text" name="enterprise" required="required"/>
         </div>
         <div class="element-input">
             <label class="title">电话</label>
-            <input class="large" type="text" name="input2" />
+            <input class="large" type="text" name="phone" required="required"/>
         </div>
         <div class="element-address">
-            <label class="title">地址</label><span class="addr1"><input  type="text" name="address[addr1]" />
-            <label class="subtitle">街道</label></span><span class="addr2"><input  type="text" name="address[addr2]" />
-            <label class="subtitle">门牌号</label></span><span class="city"><input  type="text" name="address[city]" />
-            <label class="subtitle">城市</label></span><span class="state"><input  type="text" name="address[state]" />
+            <label class="title">地址</label><span class="addr1"><input  type="text" name="address[addr1]" required="required"/>
+            <label class="subtitle">街道</label></span><span class="addr2"><input  type="text" name="address[addr2]" required="required"/>
+            <label class="subtitle">门牌号</label></span><span class="city"><input  type="text" name="address[city]" required="required"/>
+            <label class="subtitle">城市</label></span><span class="state"><input  type="text" name="address[state]" required="required"/>
             <!-- <label class="subtitle">城市</label></span><span class="zip"><input  type="text" maxlength="15" name="address[zip]" /> -->
             <label class="subtitle">邮编</label></span>
             <div class="country">
-                <select name="address[country]">
+                <select name="address[country]" required="required">
                     <option selected="selected" value="" disabled="disabled">--- Select a country ---</option>
                     <option value="United States">United States</option>
                     <option value="United Kingdom">United Kingdom</option>
@@ -271,11 +275,11 @@
         </div>
         <div class="element-email">
             <label class="title">邮箱</label>
-            <input class="large" type="email" name="email" value="" />
+            <input class="large" type="email" name="email" value="" required="required"/>
         </div>
         <div class="element-phone">
             <label class="title">手机</label>
-            <input class="large" type="tel" pattern="[+]?[\.\s\-\(\)\*\#0-9]{3,}" maxlength="24" name="phone" value="" />
+            <input class="large" type="tel" pattern="[+]?[\.\s\-\(\)\*\#0-9]{3,}" maxlength="24" name="phone" value="" required="required"/>
         </div>
         <div class="element-checkbox">
             <div class="column column1">

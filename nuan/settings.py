@@ -102,10 +102,11 @@ STATICFILES_DIRS = (
 #
 # EMAIL_USE_TLS = False
 # for sending email to register
-EMAIL_HOST = 'smtp.warmframe.com'
+# EMAIL_HOST = 'smtp.mxhichina.com'
+EMAIL_HOST = "smtp.aliyun.com"
 EMAIL_PORT = '25'
-EMAIL_HOST_USER = 'web'
-# EMAIL_HOST_USER = 'no-reply'
-# EMAIL_HOST_PASSWORD='cuspark'
-EMAIL_HOST_PASSWORD = 'Liu36363'
+EMAIL_HOST_USER = 'warmframe@aliyun.com'
+# EMAIL_HOST_PASSWORD = 'lIU36363'
+EMAIL_HOST_PASSWORD = 'liu36363'
+SERVER_EMAIL = EMAIL_HOST_USER
 EMAIL_USE_TLS = False
