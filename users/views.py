@@ -30,11 +30,16 @@ def condition(req):
 @csrf_exempt
 def register(req):
     if req.method == 'POST':
+        work = req.POST.get('input', None)
         content = ''
         for key in req.POST:
             content += key + req.POST.get(key, None)
         success_msg = '注册成功'
         # print str(content)
-    #     send_mail('暖框用户注册信息', content, '542413313@qq.com',
-    # ['yu_yang8909@163.com'], fail_silently=False)
+        if work:
+            title = u'客户公司 '+str(work)+u' - 客户查询'
+        else:
+            title = '客户查询'
+        send_mail(title, content, 'web@warmframe.com',
+    ['542413313@qq.com'], fail_silently=False)
     return render(req, 'register.html', locals())

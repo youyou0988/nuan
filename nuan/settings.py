@@ -92,11 +92,20 @@ STATICFILES_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
 )
 
-
-EMAIL_HOST = 'mail.qq.com'
-EMAIL_HOST_USER = '542413313@qq.com'
-EMAIL_HOST_PASSWORD = 'shift586shift'
-DEFAULT_FROM_EMAIL = '542413313@qq.com'
-SERVER_EMAIL = '542413313@qq.com'
-EMAIL_PORT = 25
+#
+# EMAIL_HOST = 'mail.warmframe.com'
+# EMAIL_PORT = 25
+# EMAIL_HOST_USER = 'web@warmframe.com'
+# EMAIL_HOST_PASSWORD = 'Liu36363'
+# DEFAULT_FROM_EMAIL = 'web@warmframe.com'
+# SERVER_EMAIL = 'web@warmframe.com'
+#
+# EMAIL_USE_TLS = False
+# for sending email to register
+EMAIL_HOST = 'smtp.warmframe.com'
+EMAIL_PORT = '25'
+EMAIL_HOST_USER = 'web'
+# EMAIL_HOST_USER = 'no-reply'
+# EMAIL_HOST_PASSWORD='cuspark'
+EMAIL_HOST_PASSWORD = 'Liu36363'
 EMAIL_USE_TLS = False
