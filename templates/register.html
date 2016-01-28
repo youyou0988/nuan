@@ -277,9 +277,18 @@
             <label class="title">手机</label>
             <input class="large" type="tel" pattern="[+]?[\.\s\-\(\)\*\#0-9]{3,}" maxlength="24" name="phone" value="" />
         </div>
-        <div class="submit">
-            <input type="submit" value="Submit" />
+        <div class="element-checkbox">
+            <div class="column column1">
+                <label>
+                    <input type="checkbox" name="checkbox[]" value="option 1" checked/>
+                    <span>同意<a href="/nuan/condition/">使用条款</a></span>
+                </label>
+            </div><span class="clearfix"></span>
         </div>
+        <div class="submit">
+            <input type="submit" value="提交" />
+        </div>
+
     </form>
     <p class="frmd"><a href="http://formoid.com/v29.php">html form</a> Formoid.com 2.9</p>
     <script type="text/javascript" src="/static/form_files/formoid1/formoid-metro-yellow.js"></script>
