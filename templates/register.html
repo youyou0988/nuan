@@ -14,7 +14,12 @@
     <span class="info">{{ success_msg }}</span>
     <form class="formoid-metro-yellow" style="background-color:#FFFFFF;font-size:14px;font-family:'Open Sans','Helvetica Neue','Helvetica',Arial,Verdana,sans-serif;color:#666666;max-width:480px;min-width:150px" method="post">
         <div class="title">
-            <h2>用户注册</h2></div>
+            <h2>用户注册</h2>
+        </div>
+        <div>
+            <span>亲爱的客户，为更好地服务您的工程及设计需求并提供相应的技术资料和帮助，请填写以下信息，提交后我们的客户经理会很快与您取得联络，您的查询对我们非常重要。
+</span>
+        </div>
         <div class="element-radio">
             <label class="title">性别</label>
             <div class="column column2">
@@ -272,9 +277,18 @@
             <label class="title">手机</label>
             <input class="large" type="tel" pattern="[+]?[\.\s\-\(\)\*\#0-9]{3,}" maxlength="24" name="phone" value="" />
         </div>
-        <div class="submit">
-            <input type="submit" value="Submit" />
+        <div class="element-checkbox">
+            <div class="column column1">
+                <label>
+                    <input type="checkbox" name="checkbox[]" value="option 1" checked/>
+                    <span>同意<a href="/nuan/condition/">使用条款</a></span>
+                </label>
+            </div><span class="clearfix"></span>
         </div>
+        <div class="submit">
+            <input type="submit" value="提交" />
+        </div>
+
     </form>
     <p class="frmd"><a href="http://formoid.com/v29.php">html form</a> Formoid.com 2.9</p>
     <script type="text/javascript" src="/static/form_files/formoid1/formoid-metro-yellow.js"></script>
