@@ -33,16 +33,15 @@ def register(req):
         work = req.POST.get('input', None)
         content = ''
         for key in req.POST:
-            content += key + req.POST.get(key, None)
+            content += key + " " + req.POST.get(key, None) + "\n"
         success_msg = '注册成功'
         # print str(content)
         if work:
             title = u'客户公司 '+str(work)+u' - 客户查询'
         else:
-            title = '客户查询'
-        sendEmail('warmframe@aliyun.com', 'mkt@warmframe.com', title, content)
-    #     send_mail(title, content, 'web@warmframe.com',
-    # ['542413313@qq.com'], fail_silently=False)
+            title = u'客户查询'
+        # sendEmail('warmframe@aliyun.com', 'mkt@warmframe.com', title, content)
+        sendEmail('warmframe@aliyun.com', '542413313@qq.com', title, content)
     return render(req, 'register.html', locals())
 
 from email.MIMEMultipart import MIMEMultipart
