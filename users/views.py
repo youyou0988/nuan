@@ -40,8 +40,8 @@ def register(req):
             title = u'客户公司 '+str(work)+u' - 客户查询'
         else:
             title = u'客户查询'
-        # sendEmail('warmframe@aliyun.com', 'mkt@warmframe.com', title, content)
-        sendEmail('warmframe@aliyun.com', '542413313@qq.com', title, content)
+        sendEmail('warmframe@aliyun.com', 'mkt@warmframe.com', title, content)
+        #sendEmail('warmframe@aliyun.com', '542413313@qq.com', title, content)
     return render(req, 'register.html', locals())
 
 from email.MIMEMultipart import MIMEMultipart
