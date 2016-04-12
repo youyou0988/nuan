@@ -29,6 +29,10 @@ def condition(req):
 
 @csrf_exempt
 def register(req):
+    if req.REQUEST.get('lag', None) and req.REQUEST['lag'] == 'en':
+        lan_type = 'en'
+    else:
+        lan_type = 'ch'
     if req.method == 'POST':
         work = req.POST.get('input', None)
         content = ''

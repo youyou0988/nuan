@@ -14,45 +14,46 @@
     <span class="info">{{ success_msg }}</span>
     <form class="formoid-metro-yellow" style="background-color:#FFFFFF;font-size:14px;font-family:'Open Sans','Helvetica Neue','Helvetica',Arial,Verdana,sans-serif;color:#666666;max-width:480px;min-width:150px" method="post">
         <div class="title">
-            <h2>用户注册</h2>
+            <h2>{% if lan_type == 'en' %}Registration{% else %}用户注册{% endif %}</h2>
         </div>
         <div>
-            <span>亲爱的客户，为更好地服务您的工程及设计需求并提供相应的技术资料和帮助，请填写以下信息，提交后我们的客户经理会很快与您取得联络，您的查询对我们非常重要。
+            <span>{% if lan_type == 'en' %}In order to better serve your inquires and needs, please provide your contact information as follows, our Customer Service Professional will contact you ASAP.  Your inquiries are very important for us, Thank you.
+{% else %}亲爱的客户，为更好地服务您的工程及设计需求并提供相应的技术资料和帮助，请填写以下信息，提交后我们的客户经理会很快与您取得联络，您的查询对我们非常重要。{% endif %}
 </span>
         </div>
         <div class="element-radio">
-            <label class="title">性别</label>
+            <label class="title">{% if lan_type == 'en' %}Gender{% else %}性别{% endif %}</label>
             <div class="column column2">
                 <label>
-                    <input type="radio" name="radio" value="男" required="required"/><span>男</span></label>
+                    <input type="radio" name="radio" value="男" required="required"/><span>{% if lan_type == 'en' %}Male{% else %}男{% endif %}</span></label>
             </div><span class="clearfix"></span>
             <div class="column column2">
                 <label>
-                    <input type="radio" name="radio" value="女" required="required"/><span>女</span></label>
+                    <input type="radio" name="radio" value="女" required="required"/><span>{% if lan_type == 'en' %}Female{% else %}女{% endif %}</span></label>
             </div><span class="clearfix"></span>
         </div>
         <div class="element-name">
-            <label class="title">姓名</label>
+            <label class="title">{% if lan_type == 'en' %}Name{% else %}姓名{% endif %}</label>
             <span class="nameFirst">
                 <input  type="text" size="8" name="name[first]" required="required"/>
-                <label class="subtitle">姓</label></span><span class="nameLast">
-            <input  type="text" size="14" name="name[last]" required="required"/><label class="subtitle">名</label></span></div>
+                <label class="subtitle">{% if lan_type == 'en' %}first name{% else %}姓{% endif %}</label></span><span class="nameLast">
+            <input  type="text" size="14" name="name[last]" required="required"/><label class="subtitle">{% if lan_type == 'en' %}last name{% else %}名{% endif %}</label></span></div>
         
         <div class="element-input">
-            <label class="title">公司</label>
+            <label class="title">{% if lan_type == 'en' %}Company{% else %}公司{% endif %}</label>
             <input class="large" type="text" name="enterprise" required="required"/>
         </div>
         <div class="element-input">
-            <label class="title">电话</label>
+            <label class="title">{% if lan_type == 'en' %}Phone{% else %}电话{% endif %}</label>
             <input class="large" type="text" name="phone" required="required"/>
         </div>
         <div class="element-address">
-            <label class="title">地址</label><span class="addr1"><input  type="text" name="address[addr1]" required="required"/>
-            <label class="subtitle">街道</label></span><span class="addr2"><input  type="text" name="address[addr2]" required="required"/>
-            <label class="subtitle">门牌号</label></span><span class="city"><input  type="text" name="address[city]" required="required"/>
-            <label class="subtitle">城市</label></span><span class="state"><input  type="text" name="address[state]" required="required"/>
+            <label class="title">{% if lan_type == 'en' %}Address{% else %}地址{% endif %}</label><span class="addr1"><input  type="text" name="address[addr1]" required="required"/>
+            <label class="subtitle">{% if lan_type == 'en' %}Street{% else %}街道{% endif %}</label></span><span class="addr2"><input  type="text" name="address[addr2]" required="required"/>
+            <label class="subtitle">{% if lan_type == 'en' %}House{% else %}门牌号{% endif %}</label></span><span class="city"><input  type="text" name="address[city]" required="required"/>
+            <label class="subtitle">{% if lan_type == 'en' %}City{% else %}城市{% endif %}</label></span><span class="state"><input  type="text" name="address[state]" required="required"/>
             <!-- <label class="subtitle">城市</label></span><span class="zip"><input  type="text" maxlength="15" name="address[zip]" /> -->
-            <label class="subtitle">邮编</label></span>
+            <label class="subtitle">{% if lan_type == 'en' %}Zip{% else %}邮编{% endif %}</label></span>
             <div class="country">
                 <select name="address[country]" required="required">
                     <option selected="selected" value="" disabled="disabled">--- Select a country ---</option>
@@ -270,27 +271,31 @@
                     <option value="Zambia">Zambia</option>
                     <option value="Zimbabwe">Zimbabwe</option>
                 </select><i></i>
-                <label class="subtitle">国家</label>
+                <label class="subtitle">{% if lan_type == 'en' %}Country{% else %}国家{% endif %}</label>
             </div>
         </div>
         <div class="element-email">
-            <label class="title">邮箱</label>
+            <label class="title">{% if lan_type == 'en' %}email{% else %}邮箱{% endif %}</label>
             <input class="large" type="email" name="email" value="" required="required"/>
         </div>
         <div class="element-phone">
-            <label class="title">手机</label>
+            <label class="title">{% if lan_type == 'en' %}Cellphone{% else %}手机{% endif %}</label>
             <input class="large" type="tel" pattern="[+]?[\.\s\-\(\)\*\#0-9]{3,}" maxlength="24" name="phone" value="" required="required"/>
         </div>
         <div class="element-checkbox">
             <div class="column column1">
                 <label>
                     <input type="checkbox" name="checkbox[]" value="option 1" checked/>
-                    <span>同意<a href="/condition/">使用条款</a></span>
+                    <span>{% if lan_type == 'en' %}Confirm{% else %}同意{% endif %}<a href="/condition/">{% if lan_type == 'en' %}Agreement{% else %}使用条款{% endif %}</a></span>
                 </label>
             </div><span class="clearfix"></span>
         </div>
         <div class="submit">
+            {% if lan_type == 'en' %}
+            <input type="submit" value="Submit" />
+            {% else %}
             <input type="submit" value="提交" />
+            {% endif %}
         </div>
 
     </form>
