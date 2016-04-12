@@ -13,6 +13,5 @@ urlpatterns = patterns('',
     url(r'^privacy/', 'users.views.privacy'),
     url(r'^condition/', 'users.views.condition'),
     url(r'^register/', 'users.views.register'),
-    url(r'^', 'users.views.index'),
-
+    url(r'^', 'users.views.index')
 )
